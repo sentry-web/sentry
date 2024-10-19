@@ -1,0 +1,3 @@
+{
+    "connectionString": "mongodb+srv://sentry:!sentryauth!@sentry.hm7zc.mongodb.net/?retryWrites=true&w=majority&appName=sentry"
+}

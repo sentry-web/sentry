@@ -15,7 +15,7 @@ const fs = require("fs")
 const path = require("path")
 
 
-mongoose.connect(config.ConnnectionString);
+mongoose.connect(config.connectionString);
 
 const app = express();
 app.use(express.json());
