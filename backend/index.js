@@ -21,6 +21,11 @@ const app = express();
 app.use(express.json());
 app.use(cors({origin: '*'}));
 
+//test api 
+app.get("/hello",async (req,res) => {
+    return res.status(200).json({message: "hello"});
+});
+
 //create account
 app.post("/create-account",async (req,res) => {
     const {fullname,email,password} = req.body
@@ -32,7 +37,10 @@ app.post("/create-account",async (req,res) => {
         .json({
             success:false,
             message:'All fields are required'
-        })
+        }){
+            success:false,
+            message:'All fields are required'
+        }
     }
 
     const isUser = await User.findOne({email});
