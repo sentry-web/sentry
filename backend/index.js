@@ -37,10 +37,7 @@ app.post("/create-account",async (req,res) => {
         .json({
             success:false,
             message:'All fields are required'
-        }){
-            success:false,
-            message:'All fields are required'
-        }
+        })
     }
 
     const isUser = await User.findOne({email});
@@ -379,7 +376,7 @@ app.delete('/delete-travel-stories/:id',authenticationToken , async(req,res) => 
 
         return res.status(200).json({
             success:true,
-            message:"travel story was delete successfully",
+            message:"travel story was deleted successfully",
             stories:travelStory
         }) 
     }
